@@ -110,7 +110,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a class="navbar-brand" href="{% url 'home' %}">
-                    <img src="{% static "dojo/img/logo.png" %}" alt="DefectDojo Logo" width="240"/>
+                    <img src="{% static "dojo/img/logo.png" %}" alt="Team Reviewer Logo" width="240"/>
                 </a>
 
             </div>
@@ -663,18 +663,30 @@
             <div class="row">
                 <div class="col-md-12 text-center text-">
                     <p>
-                        <a href="{% url 'home' %}"><img class="logo" src="{% static "dojo/img/chop.png" %}"
-                                                        alt="DefectDojo Chop" height="45"/></a><br/>
-                        <br>Powered By OWASP DefectDojo {% dojo_version %} ( {% dojo_current_hash %} )
+                        <a href="https://www.securityreviewer.net/"><img class="logosr" src="{% static "dojo/img/chopSR.png" %}"
+                                                        alt="Security Reviewer Chop" height="40"/></a><br/>
+                    <p style="line-height:10px;">
+                        Security {Reviewer} - Team Reviewer v. 5.0.0 EE
                     </p>
-
+                    <p style="line-height:6px;">
+                            &copy; {% now "Y" %} Security Reviewer
+                    </p>
+                    <p style="line-height:10px;">
+                        --------------- Powered by ---------------
+                    </p>
                     <p>
+                        <a href="https://owasp.org/www-project-defectdojo/"><img class="logo" src="{% static "dojo/img/chop.png" %}"
+                                                        alt="DefectDojo Chop" height="10"/></a><br/>
+                    <p style="line-height:6px;">
+                        OWASP DefectDojo {% dojo_version %} ( {% dojo_current_hash %} )
+                    </p>
+                    <p style="line-height:6px;">
                         DefectDojo is licensed under the <a
                             href="https://github.com/DefectDojo/django-DefectDojo/blob/master/LICENSE.md">Simplified BSD
                         license</a>.
                     </p>
-                    <p>
-                        &copy; {% now "Y" %} Security Reviewer
+                    <p style="line-height:6px;">
+                            &copy; {% now "Y" %} DefectDojo
                     </p>
                 </div>
             </div>
