@@ -33,6 +33,7 @@ from dojo.metrics.urls import urlpatterns as metrics_urls
 from dojo.product.urls import urlpatterns as prod_urls
 from dojo.product_type.urls import urlpatterns as pt_urls
 from dojo.reports.urls import urlpatterns as reports_urls
+from dojo.trscan.urls import urlpatterns as trscan_urls #SR
 from dojo.search.urls import urlpatterns as search_urls
 from dojo.test.urls import urlpatterns as test_urls
 from dojo.test_type.urls import urlpatterns as test_type_urls
@@ -122,6 +123,7 @@ ur += home_urls
 ur += metrics_urls
 ur += prod_urls
 ur += pt_urls
+ur += trscan_urls #SR
 ur += reports_urls
 ur += search_urls
 ur += test_type_urls
