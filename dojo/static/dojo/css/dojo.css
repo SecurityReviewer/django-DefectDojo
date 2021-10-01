@@ -261,7 +261,7 @@ body #header form#api_selector .input input#input_apiKey {
 }
 
 .badge.badge-count.badge-count0 {
-    background-color: #5cb85c;
+    background-color: #20a6d8;
 }
 
 .dropdown-toggle-h {
@@ -799,6 +799,11 @@ input[type="checkbox"] {
 }
 
 .footer img.logo {
+    width: 3%;
+    height: 3%;
+}
+
+.footer img.logosr {
     width: 5%;
     height: 5%;
 }
@@ -1145,8 +1150,8 @@ div.custom-search-form {
 .panel-default > .panel-heading {
     color: white;
     font-size: 16px;
-    background-color: rgba(32, 166, 216, 0.75);
-    border-color: #A1C0D7;
+    background-color: #519C4A;
+    border-color: #519C4A;
 }
 
 .panel-default > .panel-heading a,
