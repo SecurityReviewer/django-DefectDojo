@@ -20,7 +20,7 @@
         {% elif product_tab.title %}
           {{ product_tab.title }} |
         {% endif %}
-        DefectDojo
+        Team Reviewer
     </title>
     {% block add_css_before %}
     {% endblock %}
@@ -166,9 +166,11 @@
                             <li><a href="https://defectdojo.github.io/django-DefectDojo" target="_blank">
                                 <i class="fa fa-question-circle fa-fw"></i> Documentation</a>
                             </li>
+                            <!--
                             {% if user.is_staff and system_settings.enable_questionnaires %}
                                 <li><a href="{% url 'questionnaire' %}"> <i class="fa fa-hospital-o fa-fw"> </i> Questionnaires </a></li>
                             {% endif %}
+                            -->
                         {% endblock %}
                         {% if request.user.is_authenticated %}
                             {% if SAML2_LOGOUT_URL != '' %}
@@ -344,6 +346,7 @@
                                     </a>
                                 </li>
                             {% endif %}
+                            <!--
                             {% if request.user.is_staff and system_settings.enable_questionnaires %}
                                 <li>
                                     <a href="#"><i class="fa fa-hospital-o fa-fw"> </i> <span>Questionnaires</span><span
@@ -356,6 +359,7 @@
                                     <!-- /.nav-second-level -->
                                 </li>
                             {% endif %}
+                            -->
                                 <li id="menu_configuration">
 				                    <a href="#" aria-expanded="false" aria-label="Configuration">
                                         <i class="fa fa-cog fa-fw"></i>
@@ -659,21 +663,18 @@
             <div class="row">
                 <div class="col-md-12 text-center text-">
                     <p>
-                        <a href="{% url 'home' %}"><img class="logo" src="{% static "dojo/img/chop.png" %}"
+                        <a href="{% url 'home' %}"><img class="logo" src="{% sFtatic "dojo/img/chop.png" %}"
                                                         alt="DefectDojo Chop" height="45"/></a><br/>
-                        {% dojo_version %} ( {% dojo_current_hash %} )
+                        <br>Powered By OWASP DefectDojo {% dojo_version %} ( {% dojo_current_hash %} )
                     </p>
-                    <p>
-                        Detailed DefectDojo documentation can be found in our <a
-                            href="{% dojo_docs_url %}">GitHub Pages</a>.
-                    </p>
+
                     <p>
                         DefectDojo is licensed under the <a
                             href="https://github.com/DefectDojo/django-DefectDojo/blob/master/LICENSE.md">Simplified BSD
                         license</a>.
                     </p>
                     <p>
-                        &copy; {% now "Y" %} DefectDojo
+                        &copy; {% now "Y" %} Security Reviewer
                     </p>
                 </div>
             </div>
